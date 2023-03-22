@@ -1,0 +1,13 @@
+
+spring.config.name: application,docker
+logging:
+  level:
+    org.springframework.web: DEBUG
+    org.springframework.socket: DEBUG
+    com.awasik.gameserver: DEBUG
+    springframework:
+      security: DEBUG
+
+
+
+

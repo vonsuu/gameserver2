@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: serverdatabase01
+      POSTGRES_USER: server01
+      POSTGRES_PASSWORD: server01
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  gameserver:
+    image: awasik/game:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+volumes:
+  db-data:
