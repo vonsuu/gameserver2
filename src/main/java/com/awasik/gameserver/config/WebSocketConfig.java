@@ -1,11 +1,11 @@
-package com.awasik.gameserver;
+package com.awasik.gameserver.config;
 
+import com.awasik.gameserver.controller.WebSocketController;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
-import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 @Configuration
 @EnableWebSocket
@@ -18,8 +18,8 @@ public class WebSocketConfig implements WebSocketConfigurer {
     }
 
     @Bean
-    public MyWebSocketHandler myWebSocketHandler() {
-        return new MyWebSocketHandler();
+    public WebSocketController myWebSocketHandler() {
+        return new WebSocketController();
     }
 }
 

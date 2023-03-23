@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_creationdate_and_lastlogin_columns
+      author: me
+      changes:
+        - renameColumn:
+            tableName: accounts
+            oldColumnName: creationDate
+            newColumnName: creation_date
+        - renameColumn:
+            tableName: accounts
+            oldColumnName: lastLogin
+            newColumnName: last_login

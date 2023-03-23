@@ -1,4 +1,4 @@
-package com.awasik.gameserver;
+package com.awasik.gameserver.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

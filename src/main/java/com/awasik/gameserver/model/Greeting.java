@@ -1,4 +1,4 @@
-package com.awasik.gameserver;
+package com.awasik.gameserver.model;
 
 public class Greeting {
 

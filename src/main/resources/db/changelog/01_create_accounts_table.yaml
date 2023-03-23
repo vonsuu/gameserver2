@@ -1,3 +1,0 @@
-databaseChangeLog:
-  - include:
-      file: db/changelog/01_create_accounts_table.yaml

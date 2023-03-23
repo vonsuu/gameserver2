@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: add_creationdate_and_lastlogin_columns
+      author: me
+      changes:
+        - sql:
+            sql: ALTER TABLE accounts ALTER COLUMN "creationDate" SET DEFAULT timezone('utc', CURRENT_TIMESTAMP);
+        - sql:
+            sql: ALTER TABLE accounts ALTER COLUMN "lastLogin" SET DEFAULT timezone('utc', NULL);

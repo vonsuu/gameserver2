@@ -1,5 +1,9 @@
-
 spring.config.name: application,docker
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/serverdatabase01
+    username: server01
+    password: server01
 logging:
   level:
     org.springframework.web: DEBUG
