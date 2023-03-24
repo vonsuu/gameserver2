@@ -19,11 +19,14 @@ public class AccountService {
     }
 
     public Account createGuestAccount() {
+        String random = "guest-" + UUID.randomUUID();
         Account account = new Account();
         account.setId(UUID.randomUUID());
         account.setCreationDate(LocalDateTime.now());
         account.setLastLogin(LocalDateTime.now());
-        account.setEmail("guest-" + UUID.randomUUID() + "@example.com");
+        account.setEmail(random + "@example.com");
+        account.setUsername(random);
+        account.setPassword(random);
         return accountRepository.save(account);
     }
 }

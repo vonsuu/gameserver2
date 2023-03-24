@@ -1,11 +1,11 @@
 package com.awasik.gameserver.model;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class MyMessage {
 
     private String name;
-
-    public MyMessage() {
-    }
 
     public MyMessage(String name) {
         this.name = name;
