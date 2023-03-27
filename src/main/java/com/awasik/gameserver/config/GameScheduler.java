@@ -17,6 +17,7 @@ public class GameScheduler {
 
     @Scheduled(fixedRate = 16) // 60 frames per second
     public void update() {
+        long currentTime = System.currentTimeMillis();
         gameLoop.run();
     }
 }

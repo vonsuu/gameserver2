@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      author: your_name
+      id: create_characters_table
+      changes:
+        - createTable:
+            tableName: characters
+            columns:
+              - column:
+                  name: id
+                  type: uuid
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: level
+                  type: int
+              - column:
+                  name: current_arena_id
+                  type: uuid
+              - column:
+                  name: account_id
+                  type: uuid
+            primaryKey:
+              columnNames: id
+            foreignKeyConstraints:
+              - foreignKeyConstraint:
+                  baseColumnNames: account_id
+                  baseTableName: characters
+                  referencedColumnNames: id
+                  referencedTableName: accounts
+                  constraintName: fk_characters_account

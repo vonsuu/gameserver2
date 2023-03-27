@@ -8,7 +8,7 @@ logging:
   level:
     org.springframework.web: DEBUG
     org.springframework.socket: DEBUG
-    com.awasik.gameserver: DEBUG
+    com.awasik.gameserver: INFO
     springframework:
       security: DEBUG
 

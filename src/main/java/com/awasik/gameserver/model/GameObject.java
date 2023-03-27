@@ -5,8 +5,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class GameMessage {
-    private String method;
-    private GameData data;
-}
+public class GameObject {
 
+    private Position arenaPosition;
+    private Position areaPosition;
+
+}

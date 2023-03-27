@@ -1,12 +1,13 @@
 package com.awasik.gameserver.model;
-
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class GameMessage {
-    private String method;
-    private GameData data;
-}
+public class GameData {
+    private String characterId;
+    private String moveDirection;
 
+
+}
